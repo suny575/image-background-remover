@@ -165,6 +165,105 @@
             font-weight: bold;
             margin: 20px 0;
         }
+
+
+  .features {
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: black;
+    padding: .2rem;
+    margin: .3rem;
+}
+
+.features h3
+{
+    color: pink;
+    font-size: 1.2em;
+    margin: .5rem;
+    padding: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.features p{
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    font-style: italic;
+    font-size: medium;
+}
+
+
+.htwo
+{ 
+    padding: .3rem;
+    margin: .5rem;
+    color: red;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.contact
+{
+    width: 600px;
+    background: #000;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    border-color: #00ffee;
+    margin-left: 20rem;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+form input, form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+form button {
+    margin-top: 10px;
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0097a7;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+}
+
+.conform
+{
+    margin-top: 2rem;
+    background: #000;
+   padding: .12rem;
+   margin: .23rem;
+   color: #00ffee;
+   text-align: center;
+
+}
+
+.conform input,label{
+    margin-top: 2rem;
+    color: #fff;
+   padding: .12rem;
+   margin: .23rem;   
+}
+
     </style>
 </head>
 <body>
@@ -216,12 +315,49 @@
         </div>
     </div>
 
-<section id="features">
-    <h1>
-        this will be pricing part 
-    </h1>
+
+    <section id="features">
+        <h2 class="htwo">Features</h2>
+        <div class="features">
+
+        <div class="feature">
+            <h3>Fast Processing</h3>
+            <p>Remove backgrounds in seconds with our advanced AI algorithms.</p>
+        </div>
+        <div class="feature">
+            <h3>User Friendly</h3>
+            <p>Simple and intuitive interface for an enjoyable user experience.</p>
+        </div>
+        <div class="feature">
+            <h3>High Quality</h3>
+            <p>Get high-resolution images without any loss of quality.</p>
+        </div>
+                    
+    </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="htwo">Contact Us</h2>
+        <div class="contact">
+     
+        <form class="conform" id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+               
+    </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Background Remover. All Rights Reserved.</p>
+    </footer>
   
-</section>
+
     <script>
         const API_KEY = '8gbfnQMR5uachQJafSVKBCk4';
         const uploadBtn = document.getElementById('uploadBtn');
@@ -283,6 +419,25 @@
             link.click();
             document.body.removeChild(link);
         });
+
+
+        document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // Prevent the default form submission
+
+    // Get form values
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    // Here you can add code to send the data to your server or API
+    console.log("Name:", name);
+    console.log("Email:", email);
+    console.log("Message:", message);
+
+    // Reset the form
+    this.reset();
+    alert("Thank you for contacting us, " + name + "!");
+});
     </script>
 </body>
 </html>
