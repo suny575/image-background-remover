@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProBackground Remover</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">ProBG Remover</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero" id="home">
+    <h1>Remove Backgrounds in jeffiy</h1>
+    <p>AI-powered background removal in seconds</p>
+
+    <div class="upload-container">
+      <input type="file" id="fileInput" hidden accept="image/*">
+      <button id="uploadBtn">Upload Image</button>
+      <div class="loader"></div>
+    </div>
+
+    <div class="result-section">
+      <img src="" alt="Result" class="result-image">
+      <a href="#" class="download-btn" id="downloadLink">Download Result</a>
+    </div>
+  </div>
+
+  <div class="pricing" id="pricing">
+    <h2>Simple Pricing</h2>
+    <div class="price-card">
+      <h3>Starter</h3>
+      <div class="price">$0.99</div>
+      <p>20 Images/Month</p>
+      <div id="paypal-starter"></div>
+    </div>
+  </div>
+
+  <section id="features">
+    <h2 class="htwo">Features</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Fast Processing</h3>
+        <p>Remove backgrounds in seconds with our advanced AI algorithms.</p>
+      </div>
+      <div class="feature">
+        <h3>User Friendly</h3>
+        <p>Simple and intuitive interface for an enjoyable user experience.</p>
+      </div>
+      <div class="feature">
+        <h3>High Quality</h3>
+        <p>Get high-resolution images without any loss of quality.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="htwo">Contact Us</h2>
+    <div class="contact">
+      <form class="conform" id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Background Remover. All Rights Reserved.</p>
+  </footer>
+
+  <!-- PayPal SDK -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("YOUR_EMAILJS_PUBLIC_KEY"); // replace with your public key
+  })();
+</script>
+
+     <script src="https://www.paypal.com/sdk/js?client-id=ARpXRc0htP7Hr4IXj0HtxxE5E-d8ZYSVLZsWxdpaskjNatAsYLI5SVa8Nr2fAetfkxjqDBZ7WXBIYPy0&currency=USD"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
